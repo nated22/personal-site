@@ -4,6 +4,11 @@ node_modules/
 # next.js build output
 .next/
 
+# large media
+*.mp4
+*.webm
+*.mov
+
 # misc
 *.tsbuildinfo
 next-env.d.ts
