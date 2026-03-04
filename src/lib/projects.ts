@@ -3,6 +3,11 @@ export type ProjectImage = {
   caption: string;
 };
 
+export type ProjectVideo = {
+  src: string;
+  caption: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -12,7 +17,7 @@ export type Project = {
   description: string;
   longDescription?: string;
   images?: ProjectImage[];
-  videos?: string[];
+  videos?: ProjectVideo[];
 };
 
 export const projects: Project[] = [
@@ -25,11 +30,11 @@ export const projects: Project[] = [
     description:
       "Building a competition robot in ME210 using Arduino, custom circuitry, and software‑based PWM for precise motor control.",
     longDescription:
-      "In ME210 I am part of a small team building a fully autonomous Arduino‑based robot from the ground up. I prototype mechanisms, design and solder custom PCBs, and write low‑level C code to coordinate sensors, motors, and game logic. The focus is on fast iteration, squeezing performance out of simple hardware, and making the robot robust enough to survive real‑world competition runs.",
+      "As a part of my mechatronics (ME210) class, we have been taught how to implement Arduino-based code, develop circuits to implement sensors and utilize motors. As a final group project my team and I were tasked to develop a custom robot to deliver pucks to a target. We built a custom 3D printed robot with an IR navigation system and line following abilities to slide pucks down a ramp to the target. This was an extremely fun project where my team and I had to successfully adapt to challenges to complete the goal.",
     images: [
       { src: "/photos/RobotKindaOld.jpg", caption: "Early chassis prototype with motor mounts" },
       { src: "/photos/PWM.jpg", caption: "PWM signal testing on the oscilloscope" },
-      { src: "/photos/Bandpass%20filter.jpg", caption: "Bandpass filter circuit for sensor input" }
+      { src: "/photos/Bandpass%20filter.jpg", caption: "Bandpass filter circuit to filter out light for proper IR sensing" }
     ]
   },
   {
@@ -41,11 +46,13 @@ export const projects: Project[] = [
     description:
       "Designing and manufacturing composite airframes and 3D‑printed parts for a high‑performance RC racing plane.",
     longDescription:
-      "As part of Stanford Flight Club's Design/Build/Fly team, I help take our RC racing plane from CAD to the flight line. I design and machine molds, lay up and vacuum‑bag composite skins, and fabricate 3D‑printed components for wing structures and fuselage details. A lot of the work is about turning fragile concepts into repeatable, lightweight structures that can handle aggressive flight envelopes.",
+      "As a part of Stanford Flight Club's Design, Build, Fly team, I work as a manufacturing and team member to design and build our competition plane as well as smaller projects such as a mini custom RC plane. I have learned a lot of CAD, 3D printing, worked with composites, analyzed wing structures and aerodynamics, designed a banner deploy system, and had a lot of fun working with our team.",
     images: [
-      { src: "/photos/Fuslage.png", caption: "Fuselage mold ready for layup" },
-      { src: "/photos/WingDesign.png", caption: "Wing geometry iteration in CAD" },
-      { src: "/photos/VaccummingComposite.jpg", caption: "Vacuum‑bagging a composite skin" }
+      { src: "/photos/Fuslage.png", caption: "Fuselage CAD initial design for competition plane" },
+      { src: "/photos/VaccummingComposite.jpg", caption: "Vacuum‑bagging landing gear composite in industrial oven" },
+      { src: "/photos/WingDesign.png", caption: "XFLR5 wing geometry for mini RC plane" },
+      { src: "/photos/Red.png", caption: "XFLR5 lift and drag analysis for mini RC plane" },
+      { src: "/photos/Cl.png", caption: "XFLR5 wing lift analysis for mini RC plane" }
     ]
   },
   {
@@ -57,24 +64,30 @@ export const projects: Project[] = [
     description:
       "Designing and tuning custom desktop builds with an emphasis on thermals, noise, and benchmark performance.",
     longDescription:
-      "I build and tune custom PCs end‑to‑end: selecting parts, assembling the system, and then iterating on thermals, acoustics, and stability. I experiment with different cooling layouts, fan curves, and mild overclocking while tracking performance using tools like Novabench and stress tests. The goal is a stable daily‑driver that still feels fast, quiet, and thermally efficient.",
+      "Ever since my first PC build in 2019, I have found myself interested in custom PC building, tuning and benchmarking. I love to stay up to date on new hardware, follow new releases and others' builds. I frequently tinker with my system, optimizing cooling and overclocking components to get the best performance.",
     images: [
       { src: "/photos/Novabench.png", caption: "Novabench score after latest tuning pass" },
-      { src: "/photos/Cl.png", caption: "CPU cooler clearance check" },
-      { src: "/photos/Red.png", caption: "Final build with cable management" }
-    ]
+      { src: "/photos/PC.jpeg", caption: "Custom PC build" }
+    ],
+    videos: [{ src: "/videos/2026-03-03%2000-11-00%20(online-video-cutter.com).mp4", caption: "PC build showcase" }]
   },
   {
     slug: "running",
-    title: "Competitive Track Athlete",
+    title: "Competitive Track/Cross Country Athlete",
     subtitle: "XC/TF & Stanford Run Club",
     organization: "High school & Stanford",
     dateRange: "Sept 2020 – Present",
     description:
       "Competing and training year‑round, from leading a high school varsity team to running with Stanford's club community.",
     longDescription:
-      "Running has been a constant thread through high school and college. As a captain I helped set training plans, organize team culture, and lead workouts that took us to the state meet twice. At Stanford I continue to train with club teams, using structured mileage, strength work, and race‑specific sessions to keep improving while balancing academics and engineering projects.",
-    images: []
+      "Running has been a passion of mine ever since freshman year of high school till now. I have ran competitively since, being team captain of my high school XC/TF teams for 3 years and leading us to the CIF twice and the State meet once. I continuously battled through injury and spent countless hours trying to walk onto the Stanford XC/TF teams freshman year. This didn't work out due to injury but I still hold running very close as it has shaped my values, perseverance, work ethic and who I am today.",
+    images: [
+      { src: "/photos/06B42438-05AE-4BCD-A254-B6B77F7FBB19.JPG", caption: "League Meet 2024" },
+      { src: "/photos/IMG_2863.jpeg", caption: "State Meet 2023" },
+      { src: "/photos/IMG_5663.JPG", caption: "CIF Finals 2023" },
+      { src: "/photos/IMG_8955.jpg", caption: "Stanford Run Club 800m" }
+    ],
+    videos: [{ src: "/videos/IMG_4868.mp4", caption: "San Francisco local race win" }]
   }
 ];
 

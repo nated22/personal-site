@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/lib/projects";
@@ -52,7 +53,13 @@ const experiences: TimelineItem[] = [
 ];
 
 export default function HomePage() {
+  const searchParams = useSearchParams();
   const [tab, setTab] = useState<Tab>("experience");
+
+  useEffect(() => {
+    const urlTab = searchParams.get("tab");
+    if (urlTab === "projects") setTab("projects");
+  }, [searchParams]);
 
   return (
     <main className="relative min-h-screen bg-background text-slate-900 dark:bg-slate-950 dark:text-slate-50 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 px-6 py-10">
@@ -102,9 +109,9 @@ export default function HomePage() {
       </section>
 
       {/* Right timeline column */}
-      <section className="flex items-center justify-center">
+      <section className="flex items-start justify-center">
         <div className="w-full max-w-lg">
-          <header className="flex items-center justify-center mb-8">
+          <header className="flex items-center justify-center mb-8 sticky top-0 z-10 bg-background dark:bg-slate-950 py-4">
             <div className="pill-toggle">
               <button
                 type="button"
@@ -164,8 +171,6 @@ export default function HomePage() {
                           <h2 className="text-sm font-semibold tracking-tight text-slate-900 dark:text-slate-50">
                             <Link
                               href={`/projects/${project.slug}`}
-                              target="_blank"
-                              rel="noreferrer"
                               className="underline underline-offset-4 decoration-slate-400 hover:decoration-slate-600 hover:text-slate-700 dark:decoration-slate-500 dark:hover:decoration-slate-300"
                             >
                               {project.title}

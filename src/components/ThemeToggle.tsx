@@ -18,8 +18,6 @@ export function ThemeToggle() {
     const initial: Theme =
       stored === "light" || stored === "dark"
         ? stored
-        : prefersDark
-        ? "dark"
         : "light";
 
     setTheme(initial);
