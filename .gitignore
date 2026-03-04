@@ -4,10 +4,10 @@ node_modules/
 # next.js build output
 .next/
 
-# large media
-*.mp4
-*.webm
-*.mov
+# large media (only block files over 100MB manually)
+# *.mp4
+# *.webm
+# *.mov
 
 # misc
 *.tsbuildinfo
