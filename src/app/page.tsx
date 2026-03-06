@@ -19,36 +19,28 @@ type TimelineItem = {
 
 const experiences: TimelineItem[] = [
   {
-    title: "DBF Manufacturing Member",
-    subtitle: "Student organization",
-    organization: "Stanford Flight Club",
-    dateRange: "Sept 2025 – Present",
-    description:
-      "Help design and construct composite molds for the club’s RC racing plane, applying and curing composites and developing 3D‑printed parts."
-  },
-  {
-    title: "Mechatronics (ME210) Member",
-    subtitle: "Course project",
-    organization: "Stanford University",
-    dateRange: "January 2025 – Present",
-    description:
-      "Build a moving robot from an Arduino board and custom chassis while learning circuit design, motor control, and software‑based PWM."
-  },
-  {
     title: "XC/TF and Stanford Run Club",
     subtitle: "Team Captain",
     organization: "High school & Stanford",
-    dateRange: "Sept 2020 – June 2025",
+    dateRange: "Sept 2020 \u2013 Present",
     description:
       "Led high school team to states twice and qualified for CIF two years in a row; continue training and leadership while aiming to compete for Stanford."
+  },
+  {
+    title: "Site Operations",
+    subtitle: "Operations crew",
+    organization: "Laguna Art Festival",
+    dateRange: "June 2025 \u2013 Sept 2025",
+    description:
+      "Executed the physical setup, tear\u2011down, and daily logistical operations for a large\u2011scale event venue, including vendor booths and site infrastructure for local art festival."
   },
   {
     title: "Lifeguard",
     subtitle: "Employee",
     organization: "Seasonal position",
-    dateRange: "May 2024 – Sept 2024",
+    dateRange: "May 2024 \u2013 Sept 2024",
     description:
-      "Graduated top of a 20‑person class and earned rookie of the year while working full‑time, performing frequent saves and applying BLS skills."
+      "Graduated top of a 20\u2011person class and earned rookie of the year while working full\u2011time, performing frequent saves and applying BLS skills."
   }
 ];
 
@@ -202,4 +194,3 @@ function HomeContent() {
     </main>
   );
 }
-

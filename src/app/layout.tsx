@@ -9,7 +9,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Nathaniel Denny | Portfolio",
-  description: "Nathaniel Denny – Mechanical Engineering @ Stanford. Experience and projects."
+  description: "Nathaniel Denny – Mechanical Engineering @ Stanford. Experience and projects.",
+  icons: {
+    icon: "/favicon.jpeg"
+  }
 };
 
 export default function RootLayout({
