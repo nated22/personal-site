@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/lib/projects";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { MediaGallery } from "@/components/MediaGallery";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -57,52 +58,7 @@ export default async function ProjectPage({
       {/* Right content column */}
       <section className="flex-1 w-full px-6 pb-10 md:px-16 md:py-14 flex items-center justify-center">
         <div className="w-full max-w-3xl">
-          {project.videos && project.videos.length > 0 && (
-            <div className="grid gap-6 sm:grid-cols-2 place-items-center">
-              {project.videos.map((vid) => (
-                <figure key={vid.src} className="space-y-0">
-                  <div className="relative overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800 aspect-video">
-                    <video
-                      src={vid.src}
-                      controls
-                      muted
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <figcaption className="mx-auto mt-2 w-fit max-w-full rounded-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 px-3 py-1.5 text-[11px] leading-snug text-slate-500 dark:text-slate-300 text-center">
-                    {vid.caption}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          )}
-
-          {project.images && project.images.length > 0 && (
-            <div className={`grid gap-6 sm:grid-cols-2 place-items-center${project.videos?.length ? " mt-6" : ""}`}>
-              {project.images.map((img) => (
-                <figure key={img.src} className="space-y-0">
-                  <div className="relative overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800 aspect-[4/3]">
-                    <img
-                      src={img.src}
-                      alt={img.caption}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <figcaption className="mx-auto mt-2 w-fit max-w-full rounded-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 px-3 py-1.5 text-[11px] leading-snug text-slate-500 dark:text-slate-300 text-center">
-                    {img.caption}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          )}
-
-          {!project.images?.length && !project.videos?.length && (
-            <p className="text-sm text-slate-400 dark:text-slate-500">
-              No media yet. Drop photos into public/photos or videos into
-              public/videos, then add the paths to this project in
-              src/lib/projects.ts.
-            </p>
-          )}
+          <MediaGallery images={project.images} videos={project.videos} />
         </div>
       </section>
 

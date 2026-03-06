@@ -26,11 +26,11 @@ export const projects: Project[] = [
     title: "Arduino Based 'Curling' Robot",
     subtitle: "Mechatronics (ME210)",
     organization: "Stanford University",
-    dateRange: "January 2025 – Present",
+    dateRange: "February 2025 – March 2025",
     description:
       "Building a competition robot in ME210 using Arduino, custom circuitry, and software‑based PWM for precise motor control.",
     longDescription:
-      "As a part of my mechatronics (ME210) class, we have been taught how to implement Arduino-based code, develop circuits to implement sensors and utilize motors. As a final group project my team (team PHINeas) and I were tasked to develop a custom robot to deliver pucks to a target as a 'curling' robot. We built a custom 3D printed robot with a custom bended ramp, conveyor belt, and driving system using motors and Arduinos. I took heavy part in designing the whole robot and building the conveyor belt, driving system and also took charge of the navigation system. We tried IR sensors using a bandpass filter to detect the IR beacons, line sensors and ultrasonic sensors to detect the walls. Eventually we went with ultrasonic sensors to detect the walls for our initial test (Beat the Brick) and added line sensors as well for our competition run. We implemented full code in Arduino to make the fully navigational robot with our only input being reloading it. This was an extremely fun project where my team and I had to successfully adapt to challenges to complete the goal.",
+      "As a part of my mechatronics (ME210) class, we have been taught how to implement Arduino-based code, develop circuits to implement sensors and utilize motors. As a final group project my team (team PHINeas) and I were tasked to develop a custom robot to deliver pucks to a target as a 'curling' robot. In just 2 weeks, we built a custom 3D printed robot with a custom bended ramp, conveyor belt, and driving system using motors and Arduinos. I took heavy part in designing the whole robot and building the conveyor belt, driving system and also took charge of the navigation system. We tried IR sensors using a bandpass filter to detect the IR beacons, line sensors and ultrasonic sensors to detect the walls. Eventually we went with ultrasonic sensors to detect the walls for our initial test (Beat the Brick) and added line sensors as well for our competition run. We implemented full code in Arduino to make the fully navigational robot with our only input being reloading it. This was an extremely fun project where my team and I had to successfully adapt to challenges to complete the goal.",
     images: [
       { src: "/photos/FinalPictureRobot.jpeg", caption: "Beat the Brick build" },
       { src: "/photos/InitialConveyorDesign.jpeg", caption: "Initial conveyor design" },
@@ -57,6 +57,25 @@ export const projects: Project[] = [
       { src: "/photos/WingDesign.png", caption: "XFLR5 wing geometry for mini RC plane" },
       { src: "/photos/Red.png", caption: "XFLR5 lift and drag analysis for mini RC plane" },
       { src: "/photos/Cl.png", caption: "XFLR5 wing lift analysis for mini RC plane" }
+    ]
+  },
+  {
+    slug: "custom-truss-design",
+    title: "Custom Truss Design",
+    subtitle: "Team Member",
+    organization: "ENGR15 Stanford",
+    dateRange: "November 2025",
+    description:
+      "Designed and optimized trusses to minimize weight and maximize load-bearing length in ENGR14.",
+    longDescription:
+      "As a part of Intro to Solid Mechanics and Statics (ENGR14) my team and I designed and optimized two trusses to minimize their weight and maximize the length at which it could carry 2kg. We performed calculations to determine the optimal cross-sectional area and truss design, which we then built and successfully tested. We made a 56cm long truss and scored top 25% in the class for weight and length, having a lot of fun building and testing along the way.",
+    images: [
+      { src: "/photos/Truss1.jpeg", caption: "Final design" },
+      { src: "/photos/Truss2.jpeg", caption: "Final design" },
+      { src: "/photos/Truss3.jpeg", caption: "Final design" },
+      { src: "/photos/TrussCalcultations.jpeg", caption: "Simulating our design" },
+      { src: "/photos/SheetTrussCalc.jpg", caption: "Thickness/1st mode of failure calculations" },
+      { src: "/photos/individualPieces.jpg", caption: "Individual truss pieces" }
     ]
   },
   {
