@@ -30,8 +30,10 @@ export const projects: Project[] = [
     description:
       "Building a competition robot in ME210 using Arduino, custom circuitry, and software‑based PWM for precise motor control.",
     longDescription:
-      "As a part of my mechatronics (ME210) class, we have been taught how to implement Arduino-based code, develop circuits to implement sensors and utilize motors. As a final group project my team (team PHINeas) and I were tasked to develop a custom robot to deliver pucks to a target as a 'curling' robot. In just 2 weeks, we built a custom 3D printed robot with a custom bended ramp, conveyor belt, and driving system using motors and Arduinos. I took heavy part in designing the whole robot and building the conveyor belt, driving system and also took charge of the navigation system. We tried IR sensors using a bandpass filter to detect the IR beacons, line sensors and ultrasonic sensors to detect the walls. Eventually we went with ultrasonic sensors to detect the walls for our initial test (Beat the Brick) and added line sensors as well for our competition run. We implemented full code in Arduino to make the fully navigational robot with our only input being reloading it. This was an extremely fun project where my team and I had to successfully adapt to challenges to complete the goal.",
+      "As a part of my mechatronics (ME210) class, we have been taught how to implement Arduino-based code, develop circuits to implement sensors and utilize motors. As a final group project my team (team PHINeas) and I were tasked to develop a custom robot to deliver pucks to a target as a 'curling' robot. In just 2 weeks, we built a custom 3D printed robot with a custom bended ramp, conveyor belt, and driving system using motors and Arduinos. I took heavy part in designing the whole robot and building the conveyor belt, driving system and also took charge of the navigation system. We tried IR sensors using a bandpass filter to detect the IR beacons, line sensors and ultrasonic sensors to detect the walls. Eventually we went with ultrasonic sensors to detect the walls for our initial test (Beat the Brick) and added line sensors as well for our competition run. We implemented full code in Arduino to make the fully navigational robot with our only input being reloading it. This was an extremely fun project where my team and I had to successfully adapt to challenges to complete the goal. As a bonus we were also able to get 2nd place among 20 other teams in the competition!",
     images: [
+      { src: "/photos/CompetitionResults.jpeg", caption: "Competition results, team PHINeas, 2nd place" },
+      { src: "/photos/CompetitioPic.jpeg", caption: "Competition day" },
       { src: "/photos/FinalPictureRobot.jpeg", caption: "Beat the Brick build" },
       { src: "/photos/InitialConveyorDesign.jpeg", caption: "Initial conveyor design" },
       { src: "/photos/Bandpass%20filter.jpg", caption: "Bandpass filter circuit to filter out light for proper IR sensing" },
@@ -39,7 +41,10 @@ export const projects: Project[] = [
       { src: "/photos/RobotKindaOld.jpg", caption: "Early chassis prototype with motor mounts" },
       { src: "/photos/PWM.jpg", caption: "PWM signal testing on the oscilloscope" }
     ],
-    videos: [{ src: "/videos/BeatTheBrickVid.mp4", caption: "Beat the Brick first test run" }]
+    videos: [
+      { src: "/videos/FinalRobotBuildVid.mp4", caption: "Final robot build" },
+      { src: "/videos/BeatTheBrickVid.mp4", caption: "Beat the Brick first test run" }
+    ]
   },
   {
     slug: "flight-club",
