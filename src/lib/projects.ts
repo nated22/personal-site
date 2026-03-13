@@ -111,9 +111,9 @@ export const projects: Project[] = [
       "Running has been a passion of mine ever since freshman year of high school till now. I have ran competitively since, being team captain of my high school XC/TF teams for 3 years and leading us to the CIF twice and the State meet once. I continuously battled through injury and spent countless hours trying to walk onto the Stanford XC/TF teams freshman year. This didn't work out due to injury but I still hold running very close as it has shaped my values, perseverance, work ethic and who I am today.",
     images: [
       { src: "/photos/06B42438-05AE-4BCD-A254-B6B77F7FBB19.JPG", caption: "League Meet 2024" },
-      { src: "/photos/IMG_2863.jpeg", caption: "State Meet 2023" },
+      { src: "/photos/StateMeetInjured.jpeg", caption: "State Meet 2023" },
       { src: "/photos/IMG_5663.JPG", caption: "CIF Finals 2023" },
-      { src: "/photos/IMG_8955.jpg", caption: "Stanford Run Club 800m" }
+      { src: "/photos/RunningBooty.jpg", caption: "Stanford Run Club 800m" }
     ],
     videos: [{ src: "/videos/IMG_4868.mp4", caption: "San Francisco local race win" }]
   }
